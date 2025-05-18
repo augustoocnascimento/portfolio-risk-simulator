@@ -5,7 +5,7 @@ from pathlib import Path
 # Adiciona o diretório base ao sys.path
 sys.path.append(str(Path(__file__).parent))
 
-from modulos import analise_fundamentalista, fronteira_eficiente, risco, simulacao_carteira
+from modulos import analise_fundamentalista, risco, simulacao_carteira
 
 # Título do Dashboard
 
@@ -18,8 +18,6 @@ page = st.sidebar.selectbox('Selecione a Página', ['Análise de Risco', 'Fronte
 # Navegação
 if page == 'Análise de Risco':
     risco.show()
-elif page == 'Fronteira Eficiente':
-    fronteira_eficiente.show()
 elif page == 'Análise Fundamentalista':
     analise_fundamentalista.show()
 elif page == 'Simulação de Carteira':
